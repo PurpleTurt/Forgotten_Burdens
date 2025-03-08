@@ -95,7 +95,7 @@ public class Player_State_Machine : MonoBehaviour
         Current_State.State_Update(this);
         //Gets the Current Tile Every Frame
         Get_Tile();
-        //Gets Current Input
+        
 
     }
 
