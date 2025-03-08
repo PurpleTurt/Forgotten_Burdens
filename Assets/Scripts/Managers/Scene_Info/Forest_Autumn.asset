@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0522a66cce9a668498caea8d532e9a2d, type: 3}
+  m_Name: Forest_Autumn
+  m_EditorClassIdentifier: 
+  Lighting:
+    serializedVersion: 2
+    key0: {r: 0.021226421, g: 0.035954062, b: 0.084905684, a: 1}
+    key1: {r: 0.32336536, g: 0.21537913, b: 0.3773585, a: 1}
+    key2: {r: 1, g: 0.6783666, b: 0.495283, a: 0}
+    key3: {r: 1, g: 0.91724586, b: 0.8915094, a: 0}
+    key4: {r: 1, g: 1, b: 1, a: 0}
+    key5: {r: 0.764151, g: 0.46497867, b: 0.5059611, a: 0}
+    key6: {r: 0.3584906, g: 0.13697046, b: 0.2814697, a: 0}
+    key7: {r: 0.023529412, g: 0.039215688, b: 0.08627451, a: 0}
+    ctime0: 9638
+    ctime1: 14649
+    ctime2: 19082
+    ctime3: 23323
+    ctime4: 46260
+    ctime5: 50308
+    ctime6: 54356
+    ctime7: 58211
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 2
+  Ambiance_Clips:
+  - {fileID: 8300000, guid: 97fb8b24f8681c949ae0f71f3091bc04, type: 3}
+  - {fileID: 8300000, guid: 63e706071c9bd434c83169a34cbc6d77, type: 3}

@@ -22,10 +22,8 @@ public class Player_Test : MonoBehaviour
     [SerializeField]
     private Tilemap Main_Tile_Map;
     //Tilemap Data
-    [SerializeField]
-    private List<Tile_Data_Script> _tileData;
-    private Dictionary<TileBase, Tile_Data_Script> _DataFromTiles;
     private TileBase Tile_You_Are_On;
+    private Tile_Data_Manager Tile_Data_Manager;
     //Audio
     [SerializeField]
     private AudioSource[] audioSources;
@@ -39,20 +37,10 @@ public class Player_Test : MonoBehaviour
 
         Player_RB = GetComponent<Rigidbody2D>();
         _Animator = GetComponent<Animator>();
+        Tile_Data_Manager = FindFirstObjectByType<Tile_Data_Manager>();
     }
 
-    private void Awake()
-    {
-        _DataFromTiles = new Dictionary<TileBase, Tile_Data_Script>();
-        foreach(var tileData in _tileData) 
-        { 
-            foreach(var tile in tileData.tiles)
-            {
-                _DataFromTiles.Add(tile, tileData);
-            }
-        
-        }
-    }
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -60,7 +48,8 @@ public class Player_Test : MonoBehaviour
         InputY = Input.GetAxisRaw("Vertical");
         InputX = Input.GetAxisRaw("Horizontal");
         //Animator
-        _Animator.SetFloat("Y",Mathf.Abs(InputY));
+        _Animator.SetFloat("Y",InputY);
+        _Animator.SetFloat("X", Mathf.Abs(InputX));
 
 
 
@@ -75,12 +64,12 @@ public class Player_Test : MonoBehaviour
         Tile_You_Are_On = Main_Tile_Map.GetTile(Grid_Pos);
 
 
-            if (_DataFromTiles.ContainsKey(Tile_You_Are_On))
+         if (Tile_Data_Manager._DataFromTiles.ContainsKey(Tile_You_Are_On))
             {
-                _Angle = _DataFromTiles[Tile_You_Are_On].Angle_Dir;
-                _Ground_Type = _DataFromTiles[Tile_You_Are_On].Ground_Type;
+                _Angle = Tile_Data_Manager._DataFromTiles[Tile_You_Are_On].Angle_Dir;
+                _Ground_Type = Tile_Data_Manager._DataFromTiles[Tile_You_Are_On].Ground_Type;
             }
-            else { _Angle = Vector2.zero; _Ground_Type = 0; }
+         else { _Angle = Vector2.zero; _Ground_Type = 0; }
         
             
         
