@@ -1,11 +1,17 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player_Idle_State : Player_Base_State
 {
+    public override IEnumerator enumerator(Player_State_Machine player)
+    {
+        throw new System.NotImplementedException();
+    }
 
     public override void On_State_Enter(Player_State_Machine player)
     {
-        player.Player_Anim.Play("Idle", 0, 0);
+
+        player.Player_Anim.Play("idle", 0, 0);
 
     }
 
@@ -18,7 +24,10 @@ public class Player_Idle_State : Player_Base_State
     {
         if (player.input != new Vector2(0, 0))
         {
-            player.State_Switch(player.State_Walking);
+            //State Switching
+            if (Mathf.Abs(player.input.x) < 0.6f && Mathf.Abs(player.input.y) < 0.6f || player.Is_Walking == 1)
+            { player.State_Switch(player.State_Walking); }
+            else { player.State_Switch(player.State_Running); }
         }
     }
 }

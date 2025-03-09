@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7030840e047a743a2dfc9036dea959, type: 3}
   m_Name: Slope_Down
   m_EditorClassIdentifier: 
-  Angle_Dir: {x: 0, y: -1}
+  Angle_Dir: {x: 0, y: 1}
   Ground_Type: 0
   tiles:
   - {fileID: 11400000, guid: 3d4cdcc94e18fbf48b3832e24fb8298e, type: 2}
