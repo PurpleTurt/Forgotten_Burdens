@@ -6,18 +6,25 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
+public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected,ISave_Data
 {
     [SerializeField]
     private Scene_Info Scene_info_Object;
+
     [SerializeField]
-    private Shadow_Scriptable_Object Shadow_Data;
-    [SerializeField]
-    private Light2D Global_Light;
+    private Light2D[] Ambience_Light;
     [SerializeField]
     public AudioSource Ambiance_Source;
 
+    [Range(0, 24)]
+    public float Scene_Time;
+    public float Time_Speed;
+    public bool Scene_Has_Frozen_Time = false;
+
     private bool is_DayTime;
+
+    //Scene Flags
+    public bool[] Flags;
 
     
 
@@ -26,33 +33,23 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
     [SerializeField]
     private List<IDay_Cycle_Effected> Time_Effected_Objects()
     {
-        List<IDay_Cycle_Effected> interfaces = new List<IDay_Cycle_Effected>();
-        GameObject[] rootGameObjects = SceneManager.GetActiveScene().GetRootGameObjects();
-        foreach (var rootGameObject in rootGameObjects)
-        {
-            IDay_Cycle_Effected[] childrenInterfaces = rootGameObject.GetComponentsInChildren<IDay_Cycle_Effected>();
-            foreach (var childInterface in childrenInterfaces)
-            {
-                interfaces.Add(childInterface);
-            }
-        }
-        return interfaces;
+        IEnumerable<IDay_Cycle_Effected> Save_Objects = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<IDay_Cycle_Effected>();
+        return new List<IDay_Cycle_Effected>(Save_Objects);
     }
 
 
-    [Range(0,24)]
-    public float Scene_Time;
-    public float Time_Speed;
-    public bool Scene_Has_Frozen_Time = false;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Awake()
+    private void Start()
     {
         //Loads Audio into Memory
         Scene_info_Object.Ambiance_Clips[0].LoadAudioData();
         Scene_info_Object.Ambiance_Clips[1].LoadAudioData();
         //Sets Lighting
-        Global_Light.color = Scene_info_Object.Lighting.Evaluate(Scene_Time / 24);
+        foreach(Light2D Lighting in Ambience_Light)
+        {
+            Lighting.color = Scene_info_Object.Lighting.Evaluate(Scene_Time / 24);
+        }
+        
         //Sets Ambience Audio Source Volume to 0 for smoother lerping when entering the scene
         Ambiance_Source.volume = 0;
 
@@ -62,36 +59,42 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
         if (Scene_Time > 6 && Scene_Time < 18 && is_DayTime == false)
         {
             is_DayTime = true;
-            
+
         }
         if (Scene_Time < 6 && is_DayTime == true || Scene_Time > 18 && is_DayTime == true)
         {
             is_DayTime = false;
-            
+
 
         }
         //Runs the Routine in interface objects Depending on the time of day
         Run_Time_Objects();
 
 
-       
+
 
 
     }
 
+
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Sets the Time
         if (Scene_Has_Frozen_Time == false)
         {
-            Scene_Time += Time_Speed * Time.fixedDeltaTime * 0.005f;
+            Scene_Time += Time_Speed * Time.fixedDeltaTime * 0.1f;
             
 
             Scene_Time %= 24;
             //Sets Lighting
-            Global_Light.color = Scene_info_Object.Lighting.Evaluate(Scene_Time / 24);
-
+            if (Ambience_Light != null)
+            {
+                foreach (Light2D Lighting in Ambience_Light)
+                {
+                    Lighting.color = Scene_info_Object.Lighting.Evaluate(Scene_Time / 24);
+                }
+            }
             //Checks if it should update time relient objects
             if (Scene_Time > 6 && Scene_Time < 18 && is_DayTime == false)
             {
@@ -110,7 +113,7 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
         }
     }
 
-    //Interface Stuff
+    //Time Interface Stuff
     public void on_Daytime()
     {
         StartCoroutine(Ambience_Switch(0));
@@ -121,6 +124,16 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
         StartCoroutine(Ambience_Switch(1));
 
     }
+    //Save Handler
+    public void Save(ref Game_Data Data)
+    {
+        Data.time = Scene_Time;
+    }
+
+    public void load(Game_Data Data)
+    {
+        Scene_Time = Data.time;
+    }
     //Switched ambience at a smooth speed
     private IEnumerator Ambience_Switch(int Ambience_To_Switch_To)
     {
@@ -128,7 +141,7 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
         while(Ambiance_Source.volume != 0)
         {
             
-            Ambiance_Source.volume = Mathf.MoveTowards(Ambiance_Source.volume, 0, 0.01f);
+            Ambiance_Source.volume = Mathf.MoveTowards(Ambiance_Source.volume, 0, 0.1f);
             yield return new WaitForSecondsRealtime(0.1f);
             yield return null;
         }
@@ -137,7 +150,7 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
         while (Ambiance_Source.volume != 0.3f)
         {
             
-            Ambiance_Source.volume = Mathf.MoveTowards(Ambiance_Source.volume, 0.3f, 0.01f);
+            Ambiance_Source.volume = Mathf.MoveTowards(Ambiance_Source.volume, 0.3f, 0.1f);
             yield return new WaitForSecondsRealtime(0.1f);
             yield return null;
         }
@@ -147,17 +160,22 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
 
     private void Run_Time_Objects()
     {
-        foreach (IDay_Cycle_Effected Time_Cycle_Script in Time_Effected_Objects())
+
+        if (Scene_Time > 6 && Scene_Time < 18)
         {
-            if (Scene_Time > 6 && Scene_Time < 18)
+            foreach (IDay_Cycle_Effected Time_Cycle_Script in Time_Effected_Objects())
             {
-                
                 Time_Cycle_Script.on_Daytime();
+
             }
-            else
+
+        }
+        else
+        {
+            foreach (IDay_Cycle_Effected Time_Cycle_Script in Time_Effected_Objects())
             {
-                
                 Time_Cycle_Script.on_Nightime();
+
             }
 
         }
@@ -168,7 +186,13 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        Global_Light.color = Scene_info_Object.Lighting.Evaluate(Scene_Time / 24);
+        if (Ambience_Light != null)
+        {
+            foreach (Light2D Lighting in Ambience_Light)
+            {
+                Lighting.color = Scene_info_Object.Lighting.Evaluate(Scene_Time / 24);
+            }
+        }
     }
 #endif
 

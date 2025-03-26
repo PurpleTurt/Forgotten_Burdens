@@ -1,17 +1,22 @@
 using System.Collections;
+using System.Runtime.ExceptionServices;
 using UnityEngine;
 
 public class Player_Walking_State : Player_Base_State
 {
+    
+    //Spin Attack Check
     public override IEnumerator enumerator(Player_State_Machine player)
     {
+
         throw new System.NotImplementedException();
     }
 
     public override void On_State_Enter(Player_State_Machine player)
     {
         
-        player.Player_Anim.Play("idle", 0, 0);
+        player.Player_Anim.Play("Walk", 0, 0);
+        
     }
 
     public override void On_State_Exit(Player_State_Machine player)
@@ -22,12 +27,10 @@ public class Player_Walking_State : Player_Base_State
     public override void State_Update(Player_State_Machine player)
     {
         //Movement
-        if (Mathf.Abs(player.input.x) >= 0.1f || Mathf.Abs(player.input.y) >= 0.1f)
-        {
-            player.Player_RB.linearVelocityY = ((player.input.y - player._Angle.x * player.input.x + (player._Angle.y * player.input.y * 0.4f)) * Time.deltaTime * player.Speed) * 0.5f;
-            player.Player_RB.linearVelocityX = (player.input.x) * Time.deltaTime * player.Speed * 0.5f;
-        }
-        else { player.Player_RB.linearVelocity = Vector2.zero; }
+
+            player.Player_RB.linearVelocityY = ((player.input.normalized.y - player._Angle.normalized.x * player.input.normalized.x + (player._Angle.normalized.y * player.input.normalized.y * 0.4f)) * Time.deltaTime * player.Speed) * 0.3f;
+            player.Player_RB.linearVelocityX = (player.input.normalized.x) * Time.deltaTime * player.Speed * 0.3f;
+
 
         //Checks for a state change
         if (Mathf.Abs(player.input.x) > 0.6f && player.Is_Walking == 0 || Mathf.Abs(player.input.y) > 0.6f && player.Is_Walking == 0) 

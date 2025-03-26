@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Camera_Reposition_State : Camera_Base_State
@@ -17,11 +18,10 @@ public class Camera_Reposition_State : Camera_Base_State
         
         Vector3 vector2 = Camer.transform.position;
         
-        if (Vector2.Distance(Camer.transform.position,Camer.Player.transform.position) > 0.05f)
-        {
-            vector2 = Vector3.MoveTowards(vector2, Camer.Player.transform.position, Camer.Speed * Time.deltaTime);
+
+            vector2 = Vector3.Lerp(vector2, Camer.Player.transform.position + new Vector3(0,1,0), (Camer.Speed * Mathf.Max(Vector2.Distance(Camer.transform.position, Camer.Player.transform.position),3)) * Time.deltaTime);
             vector2.z = -10;
             Camer.transform.position = vector2;
-        }
+        
     }
 }

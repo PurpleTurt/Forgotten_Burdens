@@ -1,13 +1,13 @@
 
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 
-public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected
+
+public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Data
 {
     //States
     private Player_Base_State Current_State;
@@ -30,6 +30,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected
 
     //Bools
     public bool Is_Left;
+    public bool Locked_Controls;
     //Treated Like a bool
     // 0 = false; 1 = true;
     //Has to be this way because of the way I set up inputs
@@ -40,6 +41,8 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected
     public Vector2 input;
     public Vector2 Last_Input_Dir;
     public float Speed;
+    public int Health;
+    public int Load_Zone_ID;
 
     //Components
     public Rigidbody2D Player_RB;
@@ -75,6 +78,17 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected
             Amount_Of_Audio_Clips++;
 
         }
+        //Sets Spawn Position Based on Load zone ID
+        Spawn_Point[] spawn_Points = FindObjectsByType<Spawn_Point>(FindObjectsSortMode.None); 
+        foreach(Spawn_Point Spawn in spawn_Points)
+        {
+            if(Spawn.Spawn_ID == Load_Zone_ID)
+            {
+                transform.position = Spawn.transform.position;
+
+            }
+
+        }
 
         
 
@@ -97,7 +111,11 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected
     //Gets input
     public void On_Input(InputAction.CallbackContext Context)
     {
-        input = Context.ReadValue<Vector2>();
+        if (Locked_Controls == false)
+        {
+            input = Context.ReadValue<Vector2>();
+        }
+        
     }
     public void On_Roll_Input() 
     { 
@@ -167,4 +185,38 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected
     {
         Lamp.enabled = true;
     }
+
+
+
+    //Save Data Manager
+    public void Save(ref Game_Data Data)
+    {
+        Data.Player_Health = Health;
+        Data.Load_Zone_ID = Load_Zone_ID;
+
+    }
+
+    public void load(Game_Data Data)
+    {
+        Health = Data.Player_Health;
+        Load_Zone_ID = Data.Load_Zone_ID;
+    }
+
+    //Load Zone Manager
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "load_zone") 
+        { 
+            Load_Zone load_Zone = collision.GetComponent<Load_Zone>();
+            if (load_Zone != null) 
+            {
+                Load_Zone_ID = load_Zone.Load_Zone_ID;
+                Save_Manager.instance.Save_Game();
+                SceneManager.LoadSceneAsync(load_Zone.scene_To_Load_To);
+
+            }
+        
+        }
+    }
+
 }
