@@ -21,7 +21,7 @@ public class Camera_State_Machine : MonoBehaviour
         Current_State = State_Moving;
         Current_State.State_Enter(this);
     }
-    void Update()
+    void LateUpdate()
     {
         Current_State.State_Update(this);
     }

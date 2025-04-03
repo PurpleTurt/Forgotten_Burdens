@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Running_State : Player_Base_State
@@ -15,7 +16,7 @@ public class Player_Running_State : Player_Base_State
 
     public override void On_State_Exit(Player_State_Machine player)
     {
-        player.Last_Input_Dir = player.input;
+        
     }
 
     public override void State_Update(Player_State_Machine player)
@@ -41,6 +42,9 @@ public class Player_Running_State : Player_Base_State
                 player.Player_Anim.SetFloat("X", Mathf.Round(player.input.normalized.x) + Mathf.Round(Mathf.Abs(player.input.normalized.y) *-1 * Mathf.Round(player.input.normalized.x)));
                 player.Player_Anim.SetFloat("Y", Mathf.Round(player.input.normalized.y));
 
+            //Last input dir
+            Player_State_Machine.Last_Input_Dir = player.input;
+            
 
 
 
@@ -48,4 +52,6 @@ public class Player_Running_State : Player_Base_State
 
 
     }
+
+    
 }

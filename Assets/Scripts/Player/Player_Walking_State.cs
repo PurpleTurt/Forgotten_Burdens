@@ -42,6 +42,9 @@ public class Player_Walking_State : Player_Base_State
             player.Player_Anim.SetFloat("X", Mathf.Round(player.input.normalized.x) + Mathf.Round(Mathf.Abs(player.input.normalized.y) * -1 * Mathf.Round(player.input.normalized.x)));
             player.Player_Anim.SetFloat("Y", Mathf.Round(player.input.normalized.y));
 
+            //Last input dir
+            Player_State_Machine.Last_Input_Dir = player.input;
+            
 
         }
     }

@@ -21,7 +21,21 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1063041545, guid: fb22d97e2434d834babdbbfae2b1cd38, type: 3}
+      value: {fileID: -1218138069, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - time: 0.071428575
+      value: {fileID: 387994964, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - time: 0.14285715
+      value: {fileID: -1657434058, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - time: 0.21428572
+      value: {fileID: 870046662, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - time: 0.2857143
+      value: {fileID: -1184322917, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - time: 0.35714287
+      value: {fileID: -468185703, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - time: 0.42857143
+      value: {fileID: -2078727431, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - time: 0.5
+      value: {fileID: 1117847880, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,13 +58,20 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1063041545, guid: fb22d97e2434d834babdbbfae2b1cd38, type: 3}
+    - {fileID: -1218138069, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - {fileID: 387994964, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - {fileID: -1657434058, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - {fileID: 870046662, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - {fileID: -1184322917, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - {fileID: -468185703, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - {fileID: -2078727431, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
+    - {fileID: 1117847880, guid: e7453efaec849b24da9005a32870f5e0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.071428575
+    m_StopTime: 0.5714286
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -69,4 +90,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.071428575
+    functionName: Step_Audio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.35714287
+    functionName: Step_Audio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -11,6 +11,9 @@ public class Player_Idle_State : Player_Base_State
     public override void On_State_Enter(Player_State_Machine player)
     {
 
+        player.Player_Anim.SetFloat("X", Mathf.Round(Player_State_Machine.Last_Input_Dir.normalized.x) + Mathf.Round(Mathf.Abs(Player_State_Machine.Last_Input_Dir.normalized.y) * -1 * Mathf.Round(Player_State_Machine.Last_Input_Dir.normalized.x)));
+        player.Player_Anim.SetFloat("Y", Mathf.Round(Player_State_Machine.Last_Input_Dir.normalized.y));
+
         player.Player_Anim.Play("idle", 0, 0);
 
     }
@@ -29,5 +32,6 @@ public class Player_Idle_State : Player_Base_State
             { player.State_Switch(player.State_Walking); }
             else { player.State_Switch(player.State_Running); }
         }
+
     }
 }

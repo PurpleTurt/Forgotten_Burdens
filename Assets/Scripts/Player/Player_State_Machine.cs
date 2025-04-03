@@ -4,6 +4,10 @@ using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using System.Collections.Generic;
+
+
 
 
 
@@ -29,7 +33,6 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     private int Amount_of_Effects;
 
     //Bools
-    public bool Is_Left;
     public bool Locked_Controls;
     //Treated Like a bool
     // 0 = false; 1 = true;
@@ -39,10 +42,13 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
     //Values
     public Vector2 input;
-    public Vector2 Last_Input_Dir;
+    [Range (1,4)]
+    public int Last_Input_Dir_Index = 1;
+    public static Vector2 Last_Input_Dir;
     public float Speed;
     public int Health;
-    public int Load_Zone_ID;
+    public static int Load_Zone_ID;
+    public static Dictionary<bool,string> Inventory_Flags;
 
     //Components
     public Rigidbody2D Player_RB;
@@ -50,9 +56,6 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
 
 
-    //This is just a test, Delete when the Lamp object has been implemented
-    [SerializeField]
-    private Light2D Lamp;
 
 
     //Tilemap Data
@@ -89,6 +92,10 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
             }
 
         }
+        //Gets timemap
+        Main_Tile_Map = GameObject.Find("Main_Tilemap").GetComponent<Tilemap>();
+
+        
 
         
 
@@ -134,6 +141,10 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         //Gets the Current Tile Every Frame
         Get_Tile();
 
+        //Gets last few inputs for spin attack
+
+
+
         
     }
 
@@ -178,12 +189,12 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
     public void on_Daytime()
     {
-        Lamp.enabled = false;
+        
     }
 
     public void on_Nightime()
     {
-        Lamp.enabled = true;
+   
     }
 
 
@@ -192,14 +203,14 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     public void Save(ref Game_Data Data)
     {
         Data.Player_Health = Health;
-        Data.Load_Zone_ID = Load_Zone_ID;
+
 
     }
 
     public void load(Game_Data Data)
     {
         Health = Data.Player_Health;
-        Load_Zone_ID = Data.Load_Zone_ID;
+
     }
 
     //Load Zone Manager
@@ -218,5 +229,8 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         
         }
     }
+
+
+
 
 }
