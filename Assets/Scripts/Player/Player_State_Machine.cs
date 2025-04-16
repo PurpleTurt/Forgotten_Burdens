@@ -6,6 +6,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 
 
@@ -31,6 +32,18 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     private GameObject[] Effects;
     [SerializeField]
     private int Amount_of_Effects;
+
+    //Current Item in hand
+    public GameObject Item_in_Hand;
+    public GameObject item_in_hand_pos;
+    private GameObject item_to_be_in_hand;
+    //Equip Slots Data
+    public int E_Key_Equip;
+
+
+
+    //Items List
+    public Items_List Items;
 
     //Bools
     public bool Locked_Controls;
@@ -135,17 +148,51 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         
     }
 
+    //Item on first equip slot
+    public void item_one_use(InputAction.CallbackContext context)
+    {
+        if(Current_State != State_Roll && context.ReadValue<float>() == 0)
+        {
+            
+            //Puts item in hand if it isn't already
+            if(item_to_be_in_hand != Items.Items[E_Key_Equip] || Item_in_Hand == null)
+            {
+            Item_in_Hand = Instantiate(Items.Items[E_Key_Equip]);
+            item_to_be_in_hand = Items.Items[E_Key_Equip];
+
+
+            }
+            else
+            {
+            //Uses the item
+            Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use();
+            }
+        }
+
+    }
     void FixedUpdate()
     {
         Current_State.State_Update(this);
         //Gets the Current Tile Every Frame
         Get_Tile();
 
-        //Gets last few inputs for spin attack
+
+        
 
 
 
         
+    }
+
+    void Update()
+    {
+                //Puts item in hand in the hand
+        if(Item_in_Hand != null)
+        {
+
+        Item_in_Hand.transform.position = item_in_hand_pos.transform.position;
+
+        }
     }
 
     void Get_Tile()

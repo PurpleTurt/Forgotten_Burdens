@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc7f1306b29b27042bc9c0229b51d560, type: 3}
-  m_Name: Lantern
+  m_Script: {fileID: 11500000, guid: 74d3f27549257ad469e1e1f859158547, type: 3}
+  m_Name: Items
   m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 1820969550701754627, guid: 8900ca73e39b8dc4dae9e0147e23357d, type: 3}

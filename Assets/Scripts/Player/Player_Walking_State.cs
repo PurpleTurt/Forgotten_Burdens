@@ -47,5 +47,23 @@ public class Player_Walking_State : Player_Base_State
             
 
         }
+
+    }
+        //Item one use
+    public override void on_item_one_use(Player_State_Machine player)
+    {
+        //Puts item in hand if it isn't already
+        if(player.Item_in_Hand != player.Items.Items[0])
+        {
+            player.Item_in_Hand = player.Items.Items[0];
+
+        }
+        else
+        {
+        //Uses the item
+        player.Items.Items[0].GetComponent<IEquipable_Item>().On_Item_Use();
+        }
+        
+
     }
 }

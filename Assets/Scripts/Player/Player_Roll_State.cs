@@ -35,6 +35,13 @@ public class Player_Roll_State : Player_Base_State
         player.State_Switch(player.State_Idle);
 
     }
+        //Item one use
+    public override void on_item_one_use(Player_State_Machine player)
+    {
+
+        
+
+    }
 
     
 }

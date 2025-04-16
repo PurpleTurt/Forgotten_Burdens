@@ -36,9 +36,9 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -366,7 +366,7 @@
                 {
                     "name": "",
                     "id": "b3f66d0b-7751-423f-908b-a11c5bd95930",
-                    "path": "<Gamepad>/buttonNorth",
+                    "path": "<HID::79-1846>/button4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -421,7 +421,7 @@
                 {
                     "name": "Down",
                     "id": "eb289c5b-eb4f-402c-9c84-0f669338a7d5",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -432,7 +432,7 @@
                 {
                     "name": "Left",
                     "id": "4c0b6b18-cdec-4c0b-8f5b-e5b64ebd063b",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
