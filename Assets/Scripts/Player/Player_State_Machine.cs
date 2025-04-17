@@ -36,7 +36,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     //Current Item in hand
     public GameObject Item_in_Hand;
     public GameObject item_in_hand_pos;
-    private GameObject item_to_be_in_hand;
+
     //Equip Slots Data
     public int E_Key_Equip;
 
@@ -155,10 +155,10 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         {
             
             //Puts item in hand if it isn't already
-            if(item_to_be_in_hand != Items.Items[E_Key_Equip] || Item_in_Hand == null)
+            if(Item_in_Hand == null || Item_in_Hand.GetComponent<IEquipable_Item>() == null )
             {
             Item_in_Hand = Instantiate(Items.Items[E_Key_Equip]);
-            item_to_be_in_hand = Items.Items[E_Key_Equip];
+
 
 
             }
@@ -170,6 +170,13 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         }
 
     }
+    //Puts item in hand away when called
+    public void put_item_in_hand_away()
+    {
+        Destroy(Item_in_Hand);
+        Item_in_Hand = null;
+    }
+
     void FixedUpdate()
     {
         Current_State.State_Update(this);
@@ -186,7 +193,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
     void Update()
     {
-                //Puts item in hand in the hand
+        //updates item in hands position to actually be in hand
         if(Item_in_Hand != null)
         {
 
@@ -275,6 +282,16 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
             }
         
         }
+    }
+
+    //Switches object in hands sorting layer to apear behind the player when walking
+    public void Animator_Item_In_Hand_Layer_Switch(int layer)
+    {
+        if(Item_in_Hand != null)
+        {
+            Item_in_Hand.GetComponent<SpriteRenderer>().sortingOrder = layer;
+        }
+
     }
 
 
