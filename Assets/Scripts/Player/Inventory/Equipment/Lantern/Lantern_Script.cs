@@ -7,6 +7,8 @@ public class Lantern_Script : MonoBehaviour, IEquipable_Item
     private Light2D Light_Source;
     [SerializeField]
     private Sprite Inventory_sprite_cranberry;
+
+
     public Sprite inventory_sprite()
     {
         return Inventory_sprite_cranberry;
@@ -16,10 +18,16 @@ public class Lantern_Script : MonoBehaviour, IEquipable_Item
     {
         Light_Source.enabled = true;
     }
-    public void On_Item_Use()
+    public void On_Item_Use(float Holding_Input)
     {
-        Light_Source.enabled = !Light_Source.enabled;
+        
+
+            Light_Source.enabled = !Light_Source.enabled;
+        
+        
     }
+
+
 
 
 }

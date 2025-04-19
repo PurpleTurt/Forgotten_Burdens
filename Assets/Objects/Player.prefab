@@ -2021,9 +2021,10 @@ MonoBehaviour:
   Amount_of_Effects: 0
   Item_in_Hand: {fileID: 0}
   item_in_hand_pos: {fileID: 7029242604829154064}
-  E_Key_Equip: 0
+  E_Key_Equip: 1
   Items: {fileID: 11400000, guid: a78f92a597018bc4b9ab2e4a3fb0a1e8, type: 2}
   Locked_Controls: 0
+  Can_Roll: 0
   Is_Walking: 0
   input: {x: 0, y: 0}
   Last_Input_Dir_Index: 1
@@ -2282,7 +2283,6 @@ MonoBehaviour:
   - {fileID: 8466665537332559955}
   - {fileID: 2034547516718176249}
   items_List: {fileID: 11400000, guid: a78f92a597018bc4b9ab2e4a3fb0a1e8, type: 2}
-  Items_in_Inventory: []
   Curser: {fileID: 1732534751690696202}
   Current_Slot: 1
 --- !u!1 &2437926003320825696

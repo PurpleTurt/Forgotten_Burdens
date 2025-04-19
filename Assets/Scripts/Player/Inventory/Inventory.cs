@@ -18,11 +18,12 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject[] Slots;
 
+    public static int[] Items_in_Slots = {0,};
+
 
     [SerializeField]
     private Items_List items_List;
-    [SerializeField]
-    private List<GameObject> Items_in_Inventory;
+
 
 
     [SerializeField]
@@ -40,16 +41,11 @@ public class Inventory : MonoBehaviour
         Curser.transform.position = Slots[Current_Slot].transform.position;
 
         
-        foreach(GameObject item in items_List.Items)
-        {
 
-            Items_in_Inventory.Add(item);
-            
-        }
 
-        Slots[0].GetComponent<SpriteRenderer>().sprite = Items_in_Inventory[0].GetComponent<IEquipable_Item>().inventory_sprite();
+        Slots[0].GetComponent<SpriteRenderer>().sprite = items_List.Items[1].GetComponent<IEquipable_Item>().inventory_sprite();
         
-
+        
        
         
 
@@ -84,7 +80,7 @@ public class Inventory : MonoBehaviour
             Current_Slot %= 28;
             Curser.transform.position = Slots[Current_Slot].transform.position;
         }
-        input = reference.ReadValue<Vector2>().normalized;
+        
         
         
         

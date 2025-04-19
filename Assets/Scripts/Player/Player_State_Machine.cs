@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
+
 
 
 
@@ -47,6 +49,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
     //Bools
     public bool Locked_Controls;
+    public bool Can_Roll;
     //Treated Like a bool
     // 0 = false; 1 = true;
     //Has to be this way because of the way I set up inputs
@@ -139,7 +142,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     }
     public void On_Roll_Input() 
     { 
-        if(Current_State == State_Running) { State_Switch(State_Roll); }
+        if(Can_Roll == true) { State_Switch(State_Roll); }
     }
     //Gets Shift input
     public void On_Walk_State_input(InputAction.CallbackContext context)
@@ -151,21 +154,19 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     //Item on first equip slot
     public void item_one_use(InputAction.CallbackContext context)
     {
-        if(Current_State != State_Roll && context.ReadValue<float>() == 0)
+        if(Current_State != State_Roll && Items.Items[E_Key_Equip] != null)
         {
             
             //Puts item in hand if it isn't already
-            if(Item_in_Hand == null || Item_in_Hand.GetComponent<IEquipable_Item>() == null )
+            if(Item_in_Hand == null || Item_in_Hand != PrefabUtility.IsPartOfPrefabAsset(Items.Items[E_Key_Equip]))
             {
             Item_in_Hand = Instantiate(Items.Items[E_Key_Equip]);
-
-
 
             }
             else
             {
             //Uses the item
-            Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use();
+            Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use(context.ReadValue<float>());
             }
         }
 
@@ -177,22 +178,11 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         Item_in_Hand = null;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Current_State.State_Update(this);
         //Gets the Current Tile Every Frame
         Get_Tile();
-
-
-        
-
-
-
-        
-    }
-
-    void Update()
-    {
         //updates item in hands position to actually be in hand
         if(Item_in_Hand != null)
         {
@@ -200,7 +190,15 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         Item_in_Hand.transform.position = item_in_hand_pos.transform.position;
 
         }
+
+        
+
+
+
+        
     }
+
+
 
     void Get_Tile()
     {
@@ -293,6 +291,14 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         }
 
     }
+
+    //Exits Roll state. Called from animator
+    public void Enter_Idle_Animation()
+    {
+        State_Switch(State_Idle);
+
+    }
+
 
 
 

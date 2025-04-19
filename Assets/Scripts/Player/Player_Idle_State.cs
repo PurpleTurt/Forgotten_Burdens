@@ -13,6 +13,9 @@ public class Player_Idle_State : Player_Base_State
 
         player.Player_Anim.SetFloat("X", Mathf.Round(Player_State_Machine.Last_Input_Dir.normalized.x) + Mathf.Round(Mathf.Abs(Player_State_Machine.Last_Input_Dir.normalized.y) * -1 * Mathf.Round(Player_State_Machine.Last_Input_Dir.normalized.x)));
         player.Player_Anim.SetFloat("Y", Mathf.Round(Player_State_Machine.Last_Input_Dir.normalized.y));
+        player.Player_RB.linearVelocity = Vector2.zero;
+        
+        player.Can_Roll = false;
 
         player.Player_Anim.Play("idle", 0, 0);
 
@@ -37,19 +40,6 @@ public class Player_Idle_State : Player_Base_State
     //Item one use
     public override void on_item_one_use(Player_State_Machine player)
     {
-        //Puts item in hand if it isn't already
-        if(player.Item_in_Hand != player.Items.Items[0])
-        {
-            player.Item_in_Hand = player.Items.Items[0];
-            
-
-        }
-        else
-        {
-        //Uses the item
-        player.Items.Items[0].GetComponent<IEquipable_Item>().On_Item_Use();
-        }
-        
 
     }
 }

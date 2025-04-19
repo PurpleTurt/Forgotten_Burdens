@@ -12,6 +12,7 @@ public class Player_Running_State : Player_Base_State
     public override void On_State_Enter(Player_State_Machine player)
     {
         player.Player_Anim.Play("Run",0,0);
+        player.Can_Roll = true;
     }
 
     public override void On_State_Exit(Player_State_Machine player)
@@ -22,8 +23,8 @@ public class Player_Running_State : Player_Base_State
     public override void State_Update(Player_State_Machine player)
     {
             //Movement
-            player.Player_RB.linearVelocityY = ((player.input.y - player._Angle.x * player.input.x) + (player._Angle.y * player.input.y * 0.4f)) * Time.deltaTime * player.Speed;
-            player.Player_RB.linearVelocityX = (player.input.x) * Time.deltaTime * player.Speed;
+            player.Player_RB.linearVelocityY = ((player.input.y - player._Angle.x * player.input.x) + (player._Angle.y * player.input.y * 0.4f)) * player.Speed * Time.fixedDeltaTime;
+            player.Player_RB.linearVelocityX = (player.input.x) * player.Speed * Time.fixedDeltaTime;
         
         
 
@@ -55,17 +56,7 @@ public class Player_Running_State : Player_Base_State
     //Item one use
     public override void on_item_one_use(Player_State_Machine player)
     {
-        //Puts item in hand if it isn't already
-        if(player.Item_in_Hand != player.Items.Items[0])
-        {
-            player.Item_in_Hand = player.Items.Items[0];
 
-        }
-        else
-        {
-        //Uses the item
-        player.Items.Items[0].GetComponent<IEquipable_Item>().On_Item_Use();
-        }
         
 
     }
