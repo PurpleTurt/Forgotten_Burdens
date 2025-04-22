@@ -45,6 +45,12 @@ TagManager:
   - name: Objects
     uniqueID: 1476089639
     locked: 0
+  - name: Default layer 2
+    uniqueID: 1033531443
+    locked: 0
+  - name: Objects Layer 2
+    uniqueID: 2931040285
+    locked: 0
   - name: UI
     uniqueID: 1423034063
     locked: 0

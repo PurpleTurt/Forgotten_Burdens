@@ -109,7 +109,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
         }
         //Gets timemap
-        Main_Tile_Map = GameObject.Find("Main_Tilemap").GetComponent<Tilemap>();
+        Main_Tile_Map = GameObject.Find("Main_Tilemap_Layer_1").GetComponent<Tilemap>();
 
         
 
