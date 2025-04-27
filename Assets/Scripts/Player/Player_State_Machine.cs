@@ -40,7 +40,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     public GameObject item_in_hand_pos;
 
     //Equip Slots Data
-    public int E_Key_Equip;
+    public static int E_Key_Equip;
 
 
 
@@ -48,7 +48,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     public Items_List Items;
 
     //Bools
-    public bool Locked_Controls;
+
     public bool Can_Roll;
     //Treated Like a bool
     // 0 = false; 1 = true;
@@ -60,7 +60,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     public Vector2 input;
     [Range (1,4)]
     public int Last_Input_Dir_Index = 1;
-    public static Vector2 Last_Input_Dir;
+    public static Vector2 Last_Input_Dir = new Vector2(0,-1);
     public float Speed;
     public int Health;
     public static int Load_Zone_ID;
@@ -121,7 +121,8 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
         
     }
-
+    //Roll Animation Stuff like state switching
+    public void Roll_State_Switch_Animator_Stuff(){ State_Switch(State_Idle);}
 
     
     public void State_Switch(Player_Base_State New_State)
@@ -134,16 +135,16 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     //Gets input
     public void On_Input(InputAction.CallbackContext Context)
     {
-        if (Locked_Controls == false)
-        {
+
             input = Context.ReadValue<Vector2>();
-        }
+        
         
     }
     public void On_Roll_Input() 
     { 
         if(Can_Roll == true) { State_Switch(State_Roll); }
     }
+
     //Gets Shift input
     public void On_Walk_State_input(InputAction.CallbackContext context)
     {
@@ -154,13 +155,18 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     //Item on first equip slot
     public void item_one_use(InputAction.CallbackContext context)
     {
-        if(Current_State != State_Roll && Items.Items[E_Key_Equip] != null)
+        if(Current_State != State_Roll && Items.Items[E_Key_Equip] != null && Time.timeScale == 1)
         {
             
             //Puts item in hand if it isn't already
-            if(Item_in_Hand == null || Item_in_Hand != PrefabUtility.IsPartOfPrefabAsset(Items.Items[E_Key_Equip]))
+            if(Item_in_Hand == null || Item_in_Hand.GetComponent<IEquipable_Item>().Name() != Items.Items[E_Key_Equip].GetComponent<IEquipable_Item>().Name())
             {
+            //Destroys Current Item in hand
+            Destroy(Item_in_Hand);
+            Item_in_Hand = null;
+
             Item_in_Hand = Instantiate(Items.Items[E_Key_Equip]);
+            
 
             }
             else
@@ -174,13 +180,18 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     //Puts item in hand away when called
     public void put_item_in_hand_away()
     {
+        if(Time.timeScale == 1)
+        {
         Destroy(Item_in_Hand);
         Item_in_Hand = null;
+        }
     }
 
     void Update()
     {
+
         Current_State.State_Update(this);
+
         //Gets the Current Tile Every Frame
         Get_Tile();
         //updates item in hands position to actually be in hand
@@ -282,22 +293,9 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         }
     }
 
-    //Switches object in hands sorting layer to apear behind the player when walking
-    public void Animator_Item_In_Hand_Layer_Switch(int layer)
-    {
-        if(Item_in_Hand != null)
-        {
-            Item_in_Hand.GetComponent<SpriteRenderer>().sortingOrder = layer;
-        }
 
-    }
 
-    //Exits Roll state. Called from animator
-    public void Enter_Idle_Animation()
-    {
-        State_Switch(State_Idle);
 
-    }
 
 
 

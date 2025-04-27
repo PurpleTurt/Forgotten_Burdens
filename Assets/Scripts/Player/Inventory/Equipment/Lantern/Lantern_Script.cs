@@ -8,7 +8,10 @@ public class Lantern_Script : MonoBehaviour, IEquipable_Item
     [SerializeField]
     private Sprite Inventory_sprite_cranberry;
 
-
+    public string Name()
+    {
+        return "Lantern";
+    }
     public Sprite inventory_sprite()
     {
         return Inventory_sprite_cranberry;

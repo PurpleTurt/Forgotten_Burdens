@@ -358,8 +358,8 @@ TextureImporter:
       name: Autumn_Overworld_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 192
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -380,8 +380,8 @@ TextureImporter:
       name: Autumn_Overworld_12
       rect:
         serializedVersion: 2
-        x: 16
-        y: 160
+        x: 208
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -402,7 +402,7 @@ TextureImporter:
       name: Autumn_Overworld_13
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 160
         width: 16
         height: 16
@@ -424,7 +424,7 @@ TextureImporter:
       name: Autumn_Overworld_14
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 160
         width: 16
         height: 16
@@ -446,7 +446,7 @@ TextureImporter:
       name: Autumn_Overworld_15
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 160
         width: 16
         height: 16
@@ -468,7 +468,7 @@ TextureImporter:
       name: Autumn_Overworld_16
       rect:
         serializedVersion: 2
-        x: 80
+        x: 48
         y: 160
         width: 16
         height: 16
@@ -490,7 +490,7 @@ TextureImporter:
       name: Autumn_Overworld_17
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 160
         width: 16
         height: 16
@@ -512,7 +512,7 @@ TextureImporter:
       name: Autumn_Overworld_18
       rect:
         serializedVersion: 2
-        x: 112
+        x: 80
         y: 160
         width: 16
         height: 16
@@ -534,7 +534,7 @@ TextureImporter:
       name: Autumn_Overworld_19
       rect:
         serializedVersion: 2
-        x: 144
+        x: 96
         y: 160
         width: 16
         height: 16
@@ -556,7 +556,7 @@ TextureImporter:
       name: Autumn_Overworld_20
       rect:
         serializedVersion: 2
-        x: 160
+        x: 112
         y: 160
         width: 16
         height: 16
@@ -578,7 +578,7 @@ TextureImporter:
       name: Autumn_Overworld_21
       rect:
         serializedVersion: 2
-        x: 176
+        x: 144
         y: 160
         width: 16
         height: 16
@@ -600,8 +600,8 @@ TextureImporter:
       name: Autumn_Overworld_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 144
+        x: 160
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -622,8 +622,8 @@ TextureImporter:
       name: Autumn_Overworld_23
       rect:
         serializedVersion: 2
-        x: 16
-        y: 144
+        x: 176
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -644,7 +644,7 @@ TextureImporter:
       name: Autumn_Overworld_24
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 144
         width: 16
         height: 16
@@ -666,7 +666,7 @@ TextureImporter:
       name: Autumn_Overworld_25
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 144
         width: 16
         height: 16
@@ -688,7 +688,7 @@ TextureImporter:
       name: Autumn_Overworld_26
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 144
         width: 16
         height: 16
@@ -710,7 +710,7 @@ TextureImporter:
       name: Autumn_Overworld_27
       rect:
         serializedVersion: 2
-        x: 80
+        x: 48
         y: 144
         width: 16
         height: 16
@@ -732,7 +732,7 @@ TextureImporter:
       name: Autumn_Overworld_28
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 144
         width: 16
         height: 16
@@ -754,7 +754,7 @@ TextureImporter:
       name: Autumn_Overworld_29
       rect:
         serializedVersion: 2
-        x: 112
+        x: 80
         y: 144
         width: 16
         height: 16
@@ -776,7 +776,7 @@ TextureImporter:
       name: Autumn_Overworld_30
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 144
         width: 16
         height: 16
@@ -798,7 +798,7 @@ TextureImporter:
       name: Autumn_Overworld_31
       rect:
         serializedVersion: 2
-        x: 144
+        x: 112
         y: 144
         width: 16
         height: 16
@@ -820,7 +820,7 @@ TextureImporter:
       name: Autumn_Overworld_32
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 144
         width: 16
         height: 16
@@ -842,7 +842,7 @@ TextureImporter:
       name: Autumn_Overworld_33
       rect:
         serializedVersion: 2
-        x: 176
+        x: 144
         y: 144
         width: 16
         height: 16
@@ -864,8 +864,8 @@ TextureImporter:
       name: Autumn_Overworld_34
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 160
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -886,8 +886,8 @@ TextureImporter:
       name: Autumn_Overworld_35
       rect:
         serializedVersion: 2
-        x: 16
-        y: 128
+        x: 176
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -908,7 +908,7 @@ TextureImporter:
       name: Autumn_Overworld_36
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 128
         width: 16
         height: 16
@@ -930,7 +930,7 @@ TextureImporter:
       name: Autumn_Overworld_37
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 128
         width: 16
         height: 16
@@ -952,7 +952,7 @@ TextureImporter:
       name: Autumn_Overworld_38
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 128
         width: 16
         height: 16
@@ -974,7 +974,7 @@ TextureImporter:
       name: Autumn_Overworld_39
       rect:
         serializedVersion: 2
-        x: 80
+        x: 48
         y: 128
         width: 16
         height: 16
@@ -996,7 +996,7 @@ TextureImporter:
       name: Autumn_Overworld_40
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 128
         width: 16
         height: 16
@@ -1018,7 +1018,7 @@ TextureImporter:
       name: Autumn_Overworld_41
       rect:
         serializedVersion: 2
-        x: 112
+        x: 80
         y: 128
         width: 16
         height: 16
@@ -1040,7 +1040,7 @@ TextureImporter:
       name: Autumn_Overworld_42
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 128
         width: 16
         height: 16
@@ -1062,7 +1062,7 @@ TextureImporter:
       name: Autumn_Overworld_43
       rect:
         serializedVersion: 2
-        x: 144
+        x: 112
         y: 128
         width: 16
         height: 16
@@ -1084,8 +1084,8 @@ TextureImporter:
       name: Autumn_Overworld_44
       rect:
         serializedVersion: 2
-        x: 0
-        y: 112
+        x: 128
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -1106,8 +1106,8 @@ TextureImporter:
       name: Autumn_Overworld_45
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
+        x: 144
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -1128,8 +1128,8 @@ TextureImporter:
       name: Autumn_Overworld_46
       rect:
         serializedVersion: 2
-        x: 32
-        y: 112
+        x: 160
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -1150,8 +1150,8 @@ TextureImporter:
       name: Autumn_Overworld_47
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
+        x: 176
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -1172,7 +1172,7 @@ TextureImporter:
       name: Autumn_Overworld_48
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 112
         width: 16
         height: 16
@@ -1194,7 +1194,7 @@ TextureImporter:
       name: Autumn_Overworld_49
       rect:
         serializedVersion: 2
-        x: 80
+        x: 16
         y: 112
         width: 16
         height: 16
@@ -1216,7 +1216,7 @@ TextureImporter:
       name: Autumn_Overworld_50
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 112
         width: 16
         height: 16
@@ -1238,7 +1238,7 @@ TextureImporter:
       name: Autumn_Overworld_51
       rect:
         serializedVersion: 2
-        x: 112
+        x: 48
         y: 112
         width: 16
         height: 16
@@ -1260,7 +1260,7 @@ TextureImporter:
       name: Autumn_Overworld_52
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 112
         width: 16
         height: 16
@@ -1282,7 +1282,7 @@ TextureImporter:
       name: Autumn_Overworld_53
       rect:
         serializedVersion: 2
-        x: 144
+        x: 80
         y: 112
         width: 16
         height: 16
@@ -1304,7 +1304,7 @@ TextureImporter:
       name: Autumn_Overworld_54
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 112
         width: 16
         height: 16
@@ -1326,7 +1326,7 @@ TextureImporter:
       name: Autumn_Overworld_55
       rect:
         serializedVersion: 2
-        x: 176
+        x: 112
         y: 112
         width: 16
         height: 16
@@ -1348,7 +1348,7 @@ TextureImporter:
       name: Autumn_Overworld_56
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 112
         width: 16
         height: 16
@@ -1370,8 +1370,8 @@ TextureImporter:
       name: Autumn_Overworld_57
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 144
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1392,8 +1392,8 @@ TextureImporter:
       name: Autumn_Overworld_58
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
+        x: 160
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1414,8 +1414,8 @@ TextureImporter:
       name: Autumn_Overworld_59
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 176
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1436,8 +1436,8 @@ TextureImporter:
       name: Autumn_Overworld_60
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 192
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1458,7 +1458,7 @@ TextureImporter:
       name: Autumn_Overworld_61
       rect:
         serializedVersion: 2
-        x: 80
+        x: 0
         y: 96
         width: 16
         height: 16
@@ -1480,7 +1480,7 @@ TextureImporter:
       name: Autumn_Overworld_62
       rect:
         serializedVersion: 2
-        x: 96
+        x: 16
         y: 96
         width: 16
         height: 16
@@ -1502,7 +1502,7 @@ TextureImporter:
       name: Autumn_Overworld_63
       rect:
         serializedVersion: 2
-        x: 112
+        x: 32
         y: 96
         width: 16
         height: 16
@@ -1524,7 +1524,7 @@ TextureImporter:
       name: Autumn_Overworld_64
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 96
         width: 16
         height: 16
@@ -1546,7 +1546,7 @@ TextureImporter:
       name: Autumn_Overworld_65
       rect:
         serializedVersion: 2
-        x: 144
+        x: 80
         y: 96
         width: 16
         height: 16
@@ -1568,8 +1568,8 @@ TextureImporter:
       name: Autumn_Overworld_66
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
+        x: 96
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1590,8 +1590,8 @@ TextureImporter:
       name: Autumn_Overworld_67
       rect:
         serializedVersion: 2
-        x: 16
-        y: 80
+        x: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1612,8 +1612,8 @@ TextureImporter:
       name: Autumn_Overworld_68
       rect:
         serializedVersion: 2
-        x: 32
-        y: 80
+        x: 128
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1634,8 +1634,8 @@ TextureImporter:
       name: Autumn_Overworld_69
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
+        x: 144
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1656,8 +1656,8 @@ TextureImporter:
       name: Autumn_Overworld_70
       rect:
         serializedVersion: 2
-        x: 80
-        y: 80
+        x: 160
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1678,8 +1678,8 @@ TextureImporter:
       name: Autumn_Overworld_71
       rect:
         serializedVersion: 2
-        x: 96
-        y: 80
+        x: 176
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1700,8 +1700,8 @@ TextureImporter:
       name: Autumn_Overworld_72
       rect:
         serializedVersion: 2
-        x: 112
-        y: 80
+        x: 192
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1722,7 +1722,7 @@ TextureImporter:
       name: Autumn_Overworld_73
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 80
         width: 16
         height: 16
@@ -1744,7 +1744,7 @@ TextureImporter:
       name: Autumn_Overworld_74
       rect:
         serializedVersion: 2
-        x: 144
+        x: 16
         y: 80
         width: 16
         height: 16
@@ -1766,7 +1766,7 @@ TextureImporter:
       name: Autumn_Overworld_75
       rect:
         serializedVersion: 2
-        x: 192
+        x: 32
         y: 80
         width: 16
         height: 16
@@ -1788,8 +1788,8 @@ TextureImporter:
       name: Autumn_Overworld_76
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1810,8 +1810,8 @@ TextureImporter:
       name: Autumn_Overworld_77
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
+        x: 80
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1836,8 +1836,8 @@ TextureImporter:
       name: Autumn_Overworld_78
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 96
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1862,8 +1862,8 @@ TextureImporter:
       name: Autumn_Overworld_79
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 112
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1884,8 +1884,8 @@ TextureImporter:
       name: Autumn_Overworld_80
       rect:
         serializedVersion: 2
-        x: 80
-        y: 64
+        x: 128
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1906,8 +1906,8 @@ TextureImporter:
       name: Autumn_Overworld_81
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 144
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1928,8 +1928,8 @@ TextureImporter:
       name: Autumn_Overworld_82
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 160
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1950,8 +1950,8 @@ TextureImporter:
       name: Autumn_Overworld_83
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
+        x: 176
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1972,8 +1972,8 @@ TextureImporter:
       name: Autumn_Overworld_84
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
+        x: 192
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1994,8 +1994,8 @@ TextureImporter:
       name: Autumn_Overworld_85
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
+        x: 0
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2016,8 +2016,8 @@ TextureImporter:
       name: Autumn_Overworld_86
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
+        x: 16
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2038,8 +2038,8 @@ TextureImporter:
       name: Autumn_Overworld_87
       rect:
         serializedVersion: 2
-        x: 192
-        y: 48
+        x: 32
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2060,8 +2060,8 @@ TextureImporter:
       name: Autumn_Overworld_88
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 64
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2082,8 +2082,8 @@ TextureImporter:
       name: Autumn_Overworld_89
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 80
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2104,8 +2104,8 @@ TextureImporter:
       name: Autumn_Overworld_90
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 128
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2126,8 +2126,8 @@ TextureImporter:
       name: Autumn_Overworld_91
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
+        x: 144
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2148,8 +2148,8 @@ TextureImporter:
       name: Autumn_Overworld_92
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 160
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2170,8 +2170,8 @@ TextureImporter:
       name: Autumn_Overworld_93
       rect:
         serializedVersion: 2
-        x: 80
-        y: 32
+        x: 192
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2192,8 +2192,8 @@ TextureImporter:
       name: Autumn_Overworld_94
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 208
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2214,8 +2214,8 @@ TextureImporter:
       name: Autumn_Overworld_95
       rect:
         serializedVersion: 2
-        x: 144
-        y: 32
+        x: 0
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2236,8 +2236,8 @@ TextureImporter:
       name: Autumn_Overworld_96
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
+        x: 16
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2258,8 +2258,8 @@ TextureImporter:
       name: Autumn_Overworld_97
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
+        x: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2280,8 +2280,8 @@ TextureImporter:
       name: Autumn_Overworld_98
       rect:
         serializedVersion: 2
-        x: 208
-        y: 32
+        x: 48
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2302,8 +2302,8 @@ TextureImporter:
       name: Autumn_Overworld_99
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
+        x: 64
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2324,8 +2324,8 @@ TextureImporter:
       name: Autumn_Overworld_100
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
+        x: 192
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2346,8 +2346,8 @@ TextureImporter:
       name: Autumn_Overworld_101
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
+        x: 208
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2368,8 +2368,8 @@ TextureImporter:
       name: Autumn_Overworld_102
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
+        x: 0
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2390,8 +2390,8 @@ TextureImporter:
       name: Autumn_Overworld_103
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
+        x: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2412,8 +2412,8 @@ TextureImporter:
       name: Autumn_Overworld_104
       rect:
         serializedVersion: 2
-        x: 144
-        y: 16
+        x: 32
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2434,8 +2434,8 @@ TextureImporter:
       name: Autumn_Overworld_105
       rect:
         serializedVersion: 2
-        x: 160
-        y: 16
+        x: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2456,8 +2456,8 @@ TextureImporter:
       name: Autumn_Overworld_106
       rect:
         serializedVersion: 2
-        x: 192
-        y: 16
+        x: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2478,8 +2478,8 @@ TextureImporter:
       name: Autumn_Overworld_107
       rect:
         serializedVersion: 2
-        x: 208
-        y: 16
+        x: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2500,8 +2500,8 @@ TextureImporter:
       name: Autumn_Overworld_108
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 96
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2522,8 +2522,8 @@ TextureImporter:
       name: Autumn_Overworld_109
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 144
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2544,8 +2544,8 @@ TextureImporter:
       name: Autumn_Overworld_110
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 160
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2566,8 +2566,8 @@ TextureImporter:
       name: Autumn_Overworld_111
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
+        x: 192
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2588,8 +2588,8 @@ TextureImporter:
       name: Autumn_Overworld_112
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 208
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -2610,8 +2610,8 @@ TextureImporter:
       name: Autumn_Overworld_113
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -2632,8 +2632,8 @@ TextureImporter:
       name: Autumn_Overworld_114
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
+        x: 16
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -2654,8 +2654,8 @@ TextureImporter:
       name: Autumn_Overworld_115
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -2676,8 +2676,8 @@ TextureImporter:
       name: Autumn_Overworld_116
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
+        x: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -2698,8 +2698,8 @@ TextureImporter:
       name: Autumn_Overworld_117
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
+        x: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -2720,8 +2720,8 @@ TextureImporter:
       name: Autumn_Overworld_118
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 144
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -2742,8 +2742,8 @@ TextureImporter:
       name: Autumn_Overworld_119
       rect:
         serializedVersion: 2
-        x: 208
-        y: 0
+        x: 160
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -2756,6 +2756,314 @@ TextureImporter:
       bones: []
       spriteID: 825da1ef2d9ce9d4abc6e1d0647801d1
       internalID: -485513266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_120
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7e95c037910de45a0b131a01534e57
+      internalID: -1480982646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_121
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71876204078d0c3448a7bf1c985ab8d3
+      internalID: 1137732694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_122
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e20c35170e1f274fb142d49ef4c242f
+      internalID: 764595658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_123
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89e221050605434da9e66c45ef98673
+      internalID: -1502615401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_124
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c33be792dfa28246931af75a124abc9
+      internalID: -1288641534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_125
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78bd2e8118cd7d4cad01b958c627eef
+      internalID: -655903620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_126
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa5867796b0339499227042a5b69007
+      internalID: -158924607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_127
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a32d4ce1770f1418ee477909023c63
+      internalID: -1847388478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_128
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9729e85a0bf5e4691c093a396bc981
+      internalID: -1154997107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_129
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e637faf537d76404f9ce44454d2117fa
+      internalID: -1123344526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_130
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde28ca08a062b64eaf2ac5e6c06a94e
+      internalID: -164815599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_131
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a84b3b7dfe776a4abe81671baeaa627
+      internalID: 763337154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_132
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b6ac4550f550a449c51c28cfca1e08
+      internalID: -1806593118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Autumn_Overworld_133
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f0a8ff95edfeb4a8fa17557f7b7aab
+      internalID: -634801249
       vertices: []
       indices: 
       edges: []
@@ -2799,7 +3107,21 @@ TextureImporter:
       Autumn_Overworld_118: 395884178
       Autumn_Overworld_119: -485513266
       Autumn_Overworld_12: -438094427
+      Autumn_Overworld_120: -1480982646
+      Autumn_Overworld_121: 1137732694
+      Autumn_Overworld_122: 764595658
+      Autumn_Overworld_123: -1502615401
+      Autumn_Overworld_124: -1288641534
+      Autumn_Overworld_125: -655903620
+      Autumn_Overworld_126: -158924607
+      Autumn_Overworld_127: -1847388478
+      Autumn_Overworld_128: -1154997107
+      Autumn_Overworld_129: -1123344526
       Autumn_Overworld_13: -497593410
+      Autumn_Overworld_130: -164815599
+      Autumn_Overworld_131: 763337154
+      Autumn_Overworld_132: -1806593118
+      Autumn_Overworld_133: -634801249
       Autumn_Overworld_14: -1728715282
       Autumn_Overworld_15: 124293089
       Autumn_Overworld_16: -529925434

@@ -8,7 +8,6 @@ public class Player_Roll_State : Player_Base_State
     public override void On_State_Enter(Player_State_Machine player)
     {
         player.Player_Anim.Play("Player_Roll_Down",0,0);
-        Player_State_Machine.Last_Input_Dir = player.input;
         player.Can_Roll = false;
         
         
@@ -23,10 +22,9 @@ public class Player_Roll_State : Player_Base_State
     public override void State_Update(Player_State_Machine player)
     {
         
-
+        
         player.Player_RB.linearVelocityY = (Player_State_Machine.Last_Input_Dir.y + player.input.y * 0.5f) * Time.fixedDeltaTime * player.Speed;
         player.Player_RB.linearVelocityX = (Player_State_Machine.Last_Input_Dir.x + player.input.x * 0.5f) * Time.fixedDeltaTime * player.Speed;
-
 
 
 

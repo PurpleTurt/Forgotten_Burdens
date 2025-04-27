@@ -38,7 +38,7 @@
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(pressPoint=1,behavior=1)",
                     "initialStateCheck": false
                 },
                 {
@@ -56,7 +56,7 @@
                     "id": "f1ba0d36-48eb-4cd5-b651-1c94a6531f70",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(pressPoint=1,behavior=1)",
                     "initialStateCheck": false
                 },
                 {
@@ -334,7 +334,7 @@
                     "name": "WASD",
                     "id": "da6a943b-b240-429e-a168-da07d9cf192a",
                     "path": "2DVector",
-                    "interactions": "Press(pressPoint=1)",
+                    "interactions": "Press(pressPoint=1,behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "Inventory_move",
