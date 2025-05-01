@@ -117,7 +117,7 @@ public class Inventory : MonoBehaviour
         if(inventory_Background.activeSelf == true && context.ReadValue<float>() == 0)
         {
          
-                Player_State_Machine.E_Key_Equip = Items_in_Slots[Current_Slot];
+                Player_State_Machine.Key_Equips[1] = Items_in_Slots[Current_Slot];
                 //Changes Icon For Item Equips
                 Change_Item_Button_Icon(0);
 
@@ -145,13 +145,13 @@ public class Inventory : MonoBehaviour
     //Changes the item displayed on the equip buttons
     private void Change_Item_Button_Icon(int Button_ID)
     {
-                if(Player_State_Machine.E_Key_Equip == 0)
+                if(Player_State_Machine.Key_Equips[1] == 0)
                 {
                     Buttons_Images[Button_ID].color = Color.clear;
                 }
                 else
                 {
-                    Buttons_Images[Button_ID].sprite = items_List.Items[Player_State_Machine.E_Key_Equip].GetComponent<IEquipable_Item>().inventory_sprite();
+                    Buttons_Images[Button_ID].sprite = items_List.Items[Player_State_Machine.Key_Equips[1]].GetComponent<IEquipable_Item>().inventory_sprite();
                     Buttons_Images[Button_ID].color = Color.white;
                 }
     }
@@ -159,11 +159,12 @@ public class Inventory : MonoBehaviour
     public void Movement_input(InputAction.CallbackContext reference)
     {
 
-        if(inventory_Background.activeSelf == true && Curser.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name != "Curser_Select"){
+        if(inventory_Background.activeSelf == true && Curser.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name != "Curser_Select")
+        {
  
         
         //Moves the curser
-        input = new Vector2(reference.ReadValue<Vector2>().x,reference.ReadValue<Vector2>().y * 7);
+        input = new Vector2(Mathf.Round(reference.ReadValue<Vector2>().normalized.x),Mathf.Round(reference.ReadValue<Vector2>().normalized.y) * 7);
 
             if(Current_Slot + Mathf.RoundToInt(input.x) - Mathf.RoundToInt(input.y) < 0)
             {

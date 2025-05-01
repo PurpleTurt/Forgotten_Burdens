@@ -2,12 +2,9 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.SceneManagement;
-using UnityEngine.Rendering;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
+using System.Collections;
+using System;
 
 
 
@@ -40,7 +37,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     public GameObject item_in_hand_pos;
 
     //Equip Slots Data
-    public static int E_Key_Equip;
+    public static int[] Key_Equips = {0,0,0,0};
 
 
 
@@ -50,6 +47,8 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     //Bools
 
     public bool Can_Roll;
+
+    public bool Locked_Controls = false;
     //Treated Like a bool
     // 0 = false; 1 = true;
     //Has to be this way because of the way I set up inputs
@@ -86,6 +85,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
     void Start()
     {
+
         //Gets Components (ALWAYS Do this first)
         Player_RB = GetComponent<Rigidbody2D>();
         Player_Anim = GetComponent<Animator>();
@@ -103,7 +103,10 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         {
             if(Spawn.Spawn_ID == Load_Zone_ID)
             {
+                //Sets position
                 transform.position = Spawn.transform.position;
+                //Sets Movement Dir and Starts scene enter Coroutine
+                StartCoroutine(Scene_Load_Psuedo_Cutscene(Spawn.Dir_To_Move_To));
 
             }
 
@@ -135,7 +138,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     //Gets input
     public void On_Input(InputAction.CallbackContext Context)
     {
-
+            if(Locked_Controls == false)
             input = Context.ReadValue<Vector2>();
         
         
@@ -150,31 +153,61 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     {
         Is_Walking = context.ReadValue<float>();
         
+        
+    }
+    public void Main_Item_Use(InputAction.CallbackContext context)
+    {
+
     }
 
-    //Item on first equip slot
-    public void item_one_use(InputAction.CallbackContext context)
+    public void Item_One_Use(InputAction.CallbackContext context)
     {
-        if(Current_State != State_Roll && Items.Items[E_Key_Equip] != null && Time.timeScale == 1)
-        {
+        
+        if(Current_State != State_Roll && Items.Items[Key_Equips[1]] != null && Time.timeScale == 1 && context.ReadValue<float>() == 1)
+        StartCoroutine(item_use(1));
+    }
+    public void Item_Two_Use(InputAction.CallbackContext context)
+    {
+
+    }
+    public void Item_Three_Use(InputAction.CallbackContext context)
+    {
+        
+    }
+
+    //Uses Item. To be call from input methods
+    public IEnumerator item_use(int Button_ID)
+    {
+        
+        
             
             //Puts item in hand if it isn't already
-            if(Item_in_Hand == null || Item_in_Hand.GetComponent<IEquipable_Item>().Name() != Items.Items[E_Key_Equip].GetComponent<IEquipable_Item>().Name())
+            if(Item_in_Hand == null || Item_in_Hand.GetComponent<IEquipable_Item>().Name() != Items.Items[Key_Equips[Button_ID]].GetComponent<IEquipable_Item>().Name())
             {
+            //Plays Pullout Animation
+            Player_Anim.Play(Items.Items[Key_Equips[Button_ID]].GetComponent<IEquipable_Item>().Pullout_Item_Animation(),0,0);
+
             //Destroys Current Item in hand
             Destroy(Item_in_Hand);
             Item_in_Hand = null;
-
-            Item_in_Hand = Instantiate(Items.Items[E_Key_Equip]);
+            //Waits to instantiate item so it spawns during the animation instead of before
+            yield return new WaitForSecondsRealtime(0.1f);
+            //Gets Animation Clip Name
+            string Pullout_Ani_Name = Player_Anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            Item_in_Hand = Instantiate(Items.Items[Key_Equips[Button_ID]]);
+            //Waits for Pullout animation to end
+            yield return new WaitWhile(() => Player_Anim.GetCurrentAnimatorClipInfo(0)[0].clip.name == Pullout_Ani_Name);
             
+            
+            State_Switch(State_Idle);
 
             }
             else
             {
             //Uses the item
-            Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use(context.ReadValue<float>());
+            Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use(this);
             }
-        }
+        
 
     }
     //Puts item in hand away when called
@@ -239,7 +272,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         //Checks if there are enough audio sources in the array to play
         if (Amount_Of_Audio_Clips >= _Ground_Type) 
         {
-            Audio_Source.pitch = Random.Range(0.8f, 1.2f);
+            Audio_Source.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
             Audio_Source.clip = Player_Audio_Bank.audioClips[_Ground_Type];
             Audio_Source.Play();
         }
@@ -276,24 +309,35 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
 
     }
 
-    //Load Zone Manager
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+
+    private IEnumerator Scene_Load_Psuedo_Cutscene(Vector2 Dir_To_Walk_Towards)
     {
-        if (collision.tag == "load_zone") 
-        { 
-            Load_Zone load_Zone = collision.GetComponent<Load_Zone>();
-            if (load_Zone != null) 
-            {
-                Load_Zone_ID = load_Zone.Load_Zone_ID;
-                Save_Manager.instance.Save_Game();
-                SceneManager.LoadSceneAsync(load_Zone.scene_To_Load_To);
 
-            }
+        Locked_Controls = true;
+
         
+        UnityEngine.UI.Image image = GameObject.Find("Transition").GetComponent<UnityEngine.UI.Image>();
+        //Gets Audio Sources for lerping
+        AudioSource Ambience = GameObject.Find("Ambience_Source").GetComponent<AudioSource>();
+        AudioSource music = GameObject.Find("Scene_Music").GetComponent<AudioSource>();
+        while(image.color != Color.clear)
+        {
+            //Sets Player input
+            input = Dir_To_Walk_Towards * 0.5f;
+            //Lerps Audio volume to 0
+            music.volume = Mathf.Lerp(music.volume,0.5f,Time.fixedDeltaTime);
+            Ambience.volume = Mathf.Lerp(music.volume,0.5f,Time.fixedDeltaTime);
+            
+            
+            yield return null;
         }
+
+        
+        Locked_Controls = false;
+        input = Vector2.zero;
     }
-
-
 
 
 

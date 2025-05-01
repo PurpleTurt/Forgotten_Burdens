@@ -77,13 +77,11 @@ public class Save_Manager : MonoBehaviour
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Gets Every Object With the Save Data Interface
-        Find_Save_Objects();
-        Load_Game();
+
     }
     public void OnSceneUnloaded(Scene scene)
     {
-        Save_Game();
+        
     }
 
 

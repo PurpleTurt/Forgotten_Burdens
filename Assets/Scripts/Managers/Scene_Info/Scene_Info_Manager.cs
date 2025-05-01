@@ -17,7 +17,7 @@ public class Scene_Info_Manager : MonoBehaviour, IDay_Cycle_Effected,ISave_Data
     public AudioSource Ambiance_Source;
 
     [Range(0, 24)]
-    public float Scene_Time;
+    public static float Scene_Time = 12;
     public float Time_Speed;
     public bool Scene_Has_Frozen_Time = false;
 

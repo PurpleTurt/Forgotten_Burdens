@@ -15,4 +15,4 @@ MonoBehaviour:
   Angle_Dir: {x: 1, y: 0}
   Ground_Type: 0
   tiles:
-  - {fileID: 11400000, guid: 41e21e80666be1b45a086f295ea149fa, type: 2}
+  - {fileID: 11400000, guid: 31c9fa6d490e8ea4aa673f461ed892c2, type: 2}
