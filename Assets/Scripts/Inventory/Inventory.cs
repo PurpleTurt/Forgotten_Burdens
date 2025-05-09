@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject[] Slots;
 
-    public static int[] Items_in_Slots = {0,1,1,1,2,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0};
+    public static int[] Items_in_Slots = {0,1,1,1,2,0,3,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0};
 
 
     [SerializeField]
@@ -166,6 +166,7 @@ public class Inventory : MonoBehaviour
         //Moves the curser
         input = new Vector2(Mathf.Round(reference.ReadValue<Vector2>().normalized.x),Mathf.Round(reference.ReadValue<Vector2>().normalized.y) * 7);
 
+
             if(Current_Slot + Mathf.RoundToInt(input.x) - Mathf.RoundToInt(input.y) < 0)
             {
                 Current_Slot += Mathf.RoundToInt(input.x) - Mathf.RoundToInt(input.y) + 28;
@@ -176,6 +177,8 @@ public class Inventory : MonoBehaviour
             }
             Current_Slot %= 28;
             Curser.transform.position = Slots[Current_Slot].transform.position;
+            AudioSource.clip = Audio_clips[2];
+            AudioSource.Play();
         
         }
         

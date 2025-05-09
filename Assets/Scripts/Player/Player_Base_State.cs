@@ -10,8 +10,7 @@ public abstract class Player_Base_State
 
     public abstract void on_item_one_use(Player_State_Machine player);
     public abstract IEnumerator enumerator(Player_State_Machine player);
-    void Lateupdate()
-    { }
+
 
 
 

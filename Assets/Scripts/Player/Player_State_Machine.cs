@@ -19,6 +19,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     public Player_Idle_State State_Idle = new Player_Idle_State();
     public Player_Roll_State State_Roll = new Player_Roll_State();
     public Player_Walking_State State_Walking = new Player_Walking_State();
+    public Player_Attacking_State State_Attacking = new Player_Attacking_State();
 
     //Audio
     [SerializeField]

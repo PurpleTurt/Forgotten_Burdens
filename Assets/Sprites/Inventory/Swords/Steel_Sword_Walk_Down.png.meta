@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: fb22d97e2434d834babdbbfae2b1cd38
+guid: 4732f30e0992a5344abd3cb8ec3bb1a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1221056419637026436
-    second: Back_Idle_Redraw_0
+      213: 7497600199547115268
+    second: Steel_Sword_Walk_Down_0
+  - first:
+      213: 7591096542815412339
+    second: Steel_Sword_Walk_Down_1
+  - first:
+      213: -4114074701366844504
+    second: Steel_Sword_Walk_Down_2
+  - first:
+      213: 4155760627380132289
+    second: Steel_Sword_Walk_Down_3
+  - first:
+      213: -4973005259651999307
+    second: Steel_Sword_Walk_Down_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,181 +108,128 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Back_Idle_Redraw_0
+      name: Steel_Sword_Walk_Down_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.6875, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7a22ae456192f24599eba1b7f6b3425
-      internalID: -1063041545
+      spriteID: 2e929731936fab14ab7c3f251e8ebd5f
+      internalID: -1474241576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back_Idle_Redraw_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bcbcae01c3e81145890b0e2ac5492ca
-      internalID: 1417534203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Back_Idle_Redraw_2
+      name: Steel_Sword_Walk_Down_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
+        width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46bc04481eb5fe243bac48db19edd3c9
-      internalID: 1524149963
+      spriteID: 73e40197d02b9234d8d136a34932573b
+      internalID: -535624909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back_Idle_Redraw_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b62f03640da1f5f409dc24291b8bc81b
-      internalID: -1911000586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Back_Idle_Redraw_4
+      name: Steel_Sword_Walk_Down_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
+        width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 598121eceab26cf4f808f393f96b3b4e
-      internalID: -1040889581
+      spriteID: 86651d68bfc942448afc31731f90badb
+      internalID: 971706690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back_Idle_Redraw_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4d482e3bc8d90044b4d838f84d3283d
-      internalID: 1044717604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Back_Idle_Redraw_6
+      name: Steel_Sword_Walk_Down_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 16
+        width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.84375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ed9edf24d7032a44849a2bc43cf3c45
-      internalID: -669036223
+      spriteID: aa26c61ece0198c4b8dc7717d77ae1b1
+      internalID: -428056924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back_Idle_Redraw_7
+      name: Steel_Sword_Walk_Down_4
       rect:
         serializedVersion: 2
-        x: 112
+        x: 128
         y: 0
-        width: 16
+        width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.90625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74b2e86116e9dd442916e20bcc446b32
-      internalID: -25526804
+      spriteID: 4ff85f50834aed54497369ae6c67879d
+      internalID: -1628791778
       vertices: []
       indices: 
       edges: []
@@ -279,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3dcb18085ba60d74abe57f25298afb24
+    spriteID: 5142afa7bb749f244bacc19d5eb45ecb
     internalID: 0
     vertices: []
     indices: 
@@ -289,14 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Back_Idle_Redraw_0: -1063041545
-      Back_Idle_Redraw_1: 1417534203
-      Back_Idle_Redraw_2: 1524149963
-      Back_Idle_Redraw_3: -1911000586
-      Back_Idle_Redraw_4: -1040889581
-      Back_Idle_Redraw_5: 1044717604
-      Back_Idle_Redraw_6: -669036223
-      Back_Idle_Redraw_7: -25526804
+      Steel_Sword_Walk_Down_0: -1474241576
+      Steel_Sword_Walk_Down_1: -535624909
+      Steel_Sword_Walk_Down_2: 971706690
+      Steel_Sword_Walk_Down_3: -428056924
+      Steel_Sword_Walk_Down_4: -1628791778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

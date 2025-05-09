@@ -11,8 +11,23 @@ public class Player_Running_State : Player_Base_State
 
     public override void On_State_Enter(Player_State_Machine player)
     {
+        //plays player Animation
         player.Player_Anim.Play("Run",0,0);
         player.Can_Roll = true;
+        //Sets Item is hand floats if animator is present
+        if(player.Item_in_Hand != null){
+        //Gets Items Animator
+        Animator Item_in_Hand_animator = player.Item_in_Hand.GetComponent<Animator>();
+
+        if(Item_in_Hand_animator != null)
+        {
+            //Sets Floats and Plays Animation
+            Item_in_Hand_animator.Play("Walking",0,0);
+            Item_in_Hand_animator.SetFloat("X",player.Player_Anim.GetFloat("X"));
+            Item_in_Hand_animator.SetFloat("Y",player.Player_Anim.GetFloat("Y"));
+
+        }
+        }
     }
 
     public override void On_State_Exit(Player_State_Machine player)
@@ -38,10 +53,23 @@ public class Player_Running_State : Player_Base_State
         if (player.input == Vector2.zero) { player.State_Switch(player.State_Idle); }
         else 
         {
-            //Animator
-            
-                player.Player_Anim.SetFloat("X", Mathf.Round(player.input.normalized.x) + Mathf.Round(Mathf.Abs(player.input.normalized.y) *-1 * Mathf.Round(player.input.normalized.x)));
-                player.Player_Anim.SetFloat("Y", Mathf.Round(player.input.normalized.y));
+        //player Animator
+        player.Player_Anim.SetFloat("X", Mathf.Round(player.input.normalized.x) + Mathf.Round(Mathf.Abs(player.input.normalized.y) *-1 * Mathf.Round(player.input.normalized.x)));
+        player.Player_Anim.SetFloat("Y", Mathf.Round(player.input.normalized.y));
+
+        //Sets Item is hand floats if animator is present
+        if(player.Item_in_Hand != null){
+        //Gets Animator
+        Animator Item_in_Hand_animator = player.Item_in_Hand.GetComponent<Animator>();
+
+        if(Item_in_Hand_animator != null)
+        {
+            //Sets Floats
+            Item_in_Hand_animator.SetFloat("X",player.Player_Anim.GetFloat("X"));
+            Item_in_Hand_animator.SetFloat("Y",player.Player_Anim.GetFloat("Y"));
+
+        }
+        }
 
             //Last input dir
             Player_State_Machine.Last_Input_Dir = player.input;

@@ -96,6 +96,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -279,8 +292,8 @@ TextureImporter:
       name: Player_House_1_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 128
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -301,8 +314,8 @@ TextureImporter:
       name: Player_House_1_9
       rect:
         serializedVersion: 2
-        x: 16
-        y: 128
+        x: 144
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -323,7 +336,7 @@ TextureImporter:
       name: Player_House_1_10
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 128
         width: 16
         height: 16
@@ -345,7 +358,7 @@ TextureImporter:
       name: Player_House_1_11
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 128
         width: 16
         height: 16
@@ -367,7 +380,7 @@ TextureImporter:
       name: Player_House_1_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 128
         width: 16
         height: 16
@@ -389,7 +402,7 @@ TextureImporter:
       name: Player_House_1_13
       rect:
         serializedVersion: 2
-        x: 80
+        x: 48
         y: 128
         width: 16
         height: 16
@@ -411,7 +424,7 @@ TextureImporter:
       name: Player_House_1_14
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 128
         width: 16
         height: 16
@@ -433,7 +446,7 @@ TextureImporter:
       name: Player_House_1_15
       rect:
         serializedVersion: 2
-        x: 112
+        x: 80
         y: 128
         width: 16
         height: 16
@@ -455,7 +468,7 @@ TextureImporter:
       name: Player_House_1_16
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 128
         width: 16
         height: 16
@@ -477,8 +490,8 @@ TextureImporter:
       name: Player_House_1_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 112
+        x: 112
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -499,8 +512,8 @@ TextureImporter:
       name: Player_House_1_18
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
+        x: 128
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -521,8 +534,8 @@ TextureImporter:
       name: Player_House_1_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 112
+        x: 144
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -543,7 +556,7 @@ TextureImporter:
       name: Player_House_1_20
       rect:
         serializedVersion: 2
-        x: 48
+        x: 0
         y: 112
         width: 16
         height: 16
@@ -565,7 +578,7 @@ TextureImporter:
       name: Player_House_1_21
       rect:
         serializedVersion: 2
-        x: 64
+        x: 16
         y: 112
         width: 16
         height: 16
@@ -587,7 +600,7 @@ TextureImporter:
       name: Player_House_1_22
       rect:
         serializedVersion: 2
-        x: 80
+        x: 32
         y: 112
         width: 16
         height: 16
@@ -609,7 +622,7 @@ TextureImporter:
       name: Player_House_1_23
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 112
         width: 16
         height: 16
@@ -631,7 +644,7 @@ TextureImporter:
       name: Player_House_1_24
       rect:
         serializedVersion: 2
-        x: 112
+        x: 64
         y: 112
         width: 16
         height: 16
@@ -653,7 +666,7 @@ TextureImporter:
       name: Player_House_1_25
       rect:
         serializedVersion: 2
-        x: 128
+        x: 80
         y: 112
         width: 16
         height: 16
@@ -675,7 +688,7 @@ TextureImporter:
       name: Player_House_1_26
       rect:
         serializedVersion: 2
-        x: 144
+        x: 96
         y: 112
         width: 16
         height: 16
@@ -697,8 +710,8 @@ TextureImporter:
       name: Player_House_1_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 112
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -719,8 +732,8 @@ TextureImporter:
       name: Player_House_1_28
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
+        x: 128
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -741,8 +754,8 @@ TextureImporter:
       name: Player_House_1_29
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 144
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -763,7 +776,7 @@ TextureImporter:
       name: Player_House_1_30
       rect:
         serializedVersion: 2
-        x: 96
+        x: 0
         y: 96
         width: 16
         height: 16
@@ -785,7 +798,7 @@ TextureImporter:
       name: Player_House_1_31
       rect:
         serializedVersion: 2
-        x: 128
+        x: 16
         y: 96
         width: 16
         height: 16
@@ -807,8 +820,8 @@ TextureImporter:
       name: Player_House_1_32
       rect:
         serializedVersion: 2
-        x: 16
-        y: 80
+        x: 32
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -830,7 +843,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -852,7 +865,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -874,7 +887,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -896,7 +909,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -918,7 +931,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -940,7 +953,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -961,8 +974,8 @@ TextureImporter:
       name: Player_House_1_39
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
+        x: 144
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -983,8 +996,8 @@ TextureImporter:
       name: Player_House_1_40
       rect:
         serializedVersion: 2
-        x: 80
-        y: 64
+        x: 16
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1005,8 +1018,8 @@ TextureImporter:
       name: Player_House_1_41
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 48
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1027,8 +1040,8 @@ TextureImporter:
       name: Player_House_1_42
       rect:
         serializedVersion: 2
-        x: 112
-        y: 64
+        x: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1049,8 +1062,8 @@ TextureImporter:
       name: Player_House_1_43
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 144
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1072,7 +1085,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -1094,7 +1107,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -1115,8 +1128,8 @@ TextureImporter:
       name: Player_House_1_46
       rect:
         serializedVersion: 2
-        x: 80
-        y: 48
+        x: 144
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -1137,7 +1150,7 @@ TextureImporter:
       name: Player_House_1_47
       rect:
         serializedVersion: 2
-        x: 96
+        x: 144
         y: 48
         width: 16
         height: 16
@@ -1159,8 +1172,8 @@ TextureImporter:
       name: Player_House_1_48
       rect:
         serializedVersion: 2
-        x: 112
-        y: 48
+        x: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1181,8 +1194,8 @@ TextureImporter:
       name: Player_House_1_49
       rect:
         serializedVersion: 2
-        x: 128
-        y: 48
+        x: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1203,7 +1216,7 @@ TextureImporter:
       name: Player_House_1_50
       rect:
         serializedVersion: 2
-        x: 48
+        x: 96
         y: 32
         width: 16
         height: 16
@@ -1225,7 +1238,7 @@ TextureImporter:
       name: Player_House_1_51
       rect:
         serializedVersion: 2
-        x: 64
+        x: 112
         y: 32
         width: 16
         height: 16
@@ -1247,8 +1260,8 @@ TextureImporter:
       name: Player_House_1_52
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
+        x: 128
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1269,8 +1282,8 @@ TextureImporter:
       name: Player_House_1_53
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
+        x: 144
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1291,8 +1304,8 @@ TextureImporter:
       name: Player_House_1_54
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
+        x: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1313,8 +1326,8 @@ TextureImporter:
       name: Player_House_1_55
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 96
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1327,6 +1340,204 @@ TextureImporter:
       bones: []
       spriteID: b4bb42fc937e6a3408e0d8bc38fd0183
       internalID: 704690405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_56
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe988431a37947428b2ff6f1263c619
+      internalID: -1076857234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_57
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64706a4cd09c5f47a3caf28817d98f6
+      internalID: 1745496678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_58
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8d60f9e67f601499b9dbf82de9d409
+      internalID: 1412032715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_59
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a705a1d8b2bf0f4e9995d8c61ba8b57
+      internalID: 1036135672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_60
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bffd9dc1980eb14c86a449f4bcc3f68
+      internalID: 896744471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0b95aff312a0e4f8dbf9523da2b2a1
+      internalID: -710157540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_62
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682bd8ee1ef4dc64da29c9c05631924b
+      internalID: -1010741357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_63
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551e64fdcf4f91b4ab111bf97c107dc9
+      internalID: -1598784624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_House_1_64
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407f3dd1bcd40194e8b83d844e8bc58c
+      internalID: -1145918275
       vertices: []
       indices: 
       edges: []
@@ -1397,7 +1608,16 @@ TextureImporter:
       Player_House_1_53: -331870787
       Player_House_1_54: 408276747
       Player_House_1_55: 704690405
+      Player_House_1_56: -1076857234
+      Player_House_1_57: 1745496678
+      Player_House_1_58: 1412032715
+      Player_House_1_59: 1036135672
       Player_House_1_6: 1761934754
+      Player_House_1_60: 896744471
+      Player_House_1_61: -710157540
+      Player_House_1_62: -1010741357
+      Player_House_1_63: -1598784624
+      Player_House_1_64: -1145918275
       Player_House_1_7: 1284585870
       Player_House_1_8: 1394329001
       Player_House_1_9: 486159869
