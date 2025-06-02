@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -28,11 +29,12 @@ public class Lantern_Script : MonoBehaviour, IEquipable_Item
         Light_Source.enabled = true;
 
     }
-    public void On_Item_Use(Player_State_Machine player)
+    public IEnumerator On_Item_Use(Player_State_Machine player)
     {
-            
 
-            Light_Source.enabled = !Light_Source.enabled;
+
+        Light_Source.enabled = !Light_Source.enabled;
+        yield return null;
         
         
     }

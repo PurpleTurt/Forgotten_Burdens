@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Jimbo : MonoBehaviour, IEquipable_Item
@@ -22,10 +23,11 @@ public class Jimbo : MonoBehaviour, IEquipable_Item
     {
        
     }
-    public void On_Item_Use(Player_State_Machine player)
+    public IEnumerator On_Item_Use(Player_State_Machine player)
     {
-        
+
         Debug.Log("Helo Wolrd!!!1!11! ! 1   ");
+        yield return null;
            
         
         

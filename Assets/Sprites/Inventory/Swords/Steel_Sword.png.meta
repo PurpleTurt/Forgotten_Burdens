@@ -130,7 +130,7 @@ TextureImporter:
         width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.5208334, y: 0.90625}
+      pivot: {x: 0.4166667, y: 0.53125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.875}
+      pivot: {x: 0.4375, y: 0.59375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,7 +174,7 @@ TextureImporter:
         width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.5208334, y: 0.875}
+      pivot: {x: 0.4791667, y: 0.65625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,7 +196,7 @@ TextureImporter:
         width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.5208334, y: 0.875}
+      pivot: {x: 0.5833334, y: 0.84375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,6 +205,50 @@ TextureImporter:
       bones: []
       spriteID: 0bcfb64c3adb45148b298cbf59a63013
       internalID: 1233019094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steel_Sword_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.8125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc9d4dd50051304dada00f8bb833c79
+      internalID: 1729841556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steel_Sword_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf90afb34b1c5da448fed3be0768c639
+      internalID: -497291137
       vertices: []
       indices: 
       edges: []
@@ -227,6 +271,8 @@ TextureImporter:
       Steel_Sword_1: -1228892774
       Steel_Sword_2: -721142443
       Steel_Sword_3: 1233019094
+      Steel_Sword_4: 1729841556
+      Steel_Sword_5: -497291137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,7 +14,7 @@ using System;
 public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Data
 {
     //States
-    private Player_Base_State Current_State;
+    public Player_Base_State Current_State;
     public Player_Running_State State_Running = new Player_Running_State();
     public Player_Idle_State State_Idle = new Player_Idle_State();
     public Player_Roll_State State_Roll = new Player_Roll_State();
@@ -37,8 +37,10 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
     public GameObject Item_in_Hand;
     public GameObject item_in_hand_pos;
 
+    public Rigidbody2D Item_In_Hand_RB;
+
     //Equip Slots Data
-    public static int[] Key_Equips = {0,0,0,0};
+    public static int[] Key_Equips = { 0, 0, 0, 0 };
 
 
 
@@ -196,6 +198,8 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
             //Gets Animation Clip Name
             string Pullout_Ani_Name = Player_Anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
             Item_in_Hand = Instantiate(Items.Items[Key_Equips[Button_ID]]);
+            Item_in_Hand.transform.position = item_in_hand_pos.transform.position;
+
             //Waits for Pullout animation to end
             yield return new WaitWhile(() => Player_Anim.GetCurrentAnimatorClipInfo(0)[0].clip.name == Pullout_Ani_Name);
             
@@ -206,7 +210,8 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
             else
             {
             //Uses the item
-            Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use(this);
+            StopCoroutine(Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use(this));
+            StartCoroutine(Item_in_Hand.GetComponent<IEquipable_Item>().On_Item_Use(this));
             }
         
 
@@ -232,7 +237,7 @@ public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Da
         if(Item_in_Hand != null)
         {
 
-        Item_in_Hand.transform.position = item_in_hand_pos.transform.position;
+            Item_in_Hand.transform.position = item_in_hand_pos.transform.position;
 
         }
 
