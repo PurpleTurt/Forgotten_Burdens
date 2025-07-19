@@ -7,7 +7,7 @@ public class Player_Roll_State : Player_Base_State
 
     public override void On_State_Enter(Player_State_Machine player)
     {
-        player.Player_Anim.Play("Player_Roll_Down",0,0);
+        player.Player_Anim.Play("Roll",0,0);
         player.Can_Roll = false;
         
         

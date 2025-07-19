@@ -11,7 +11,7 @@ using System;
 
 
 
-public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected,ISave_Data
+public class Player_State_Machine : MonoBehaviour , IDay_Cycle_Effected, ISave_Data
 {
     //States
     public Player_Base_State Current_State;
